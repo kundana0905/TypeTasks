@@ -2,6 +2,8 @@
 
 A lightweight task tracker built with plain HTML, CSS, and TypeScript. Add a task, advance it from **To do** to **In progress** to **Done**, and filter the list by status.
 
+Tasks are kept in memory and reset when the page is refreshed.
+
 ## Build
 
 Install the TypeScript compiler and compile the browser modules:
