@@ -16,6 +16,12 @@ export function addTask(tasks: Task[], title: string): Task[] {
   return [...tasks, { id: nextId, title: trimmedTitle, status: "todo" }];
 }
 
+export function completeTask(tasks: Task[], id: number): Task[] {
+  return tasks.map((task) =>
+    task.id === id ? { ...task, status: "done" } : task,
+  );
+}
+
 export function advanceTask(tasks: Task[], id: number): Task[] {
   return tasks.map((task) => {
     if (task.id !== id || task.status === "done") {
